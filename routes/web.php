@@ -9,3 +9,11 @@ Route::middleware(['auth', 'verified'])->group(function () {
 });
 
 require __DIR__.'/settings.php';
+
+Route::get('/gegar-login', function () {
+    return view('auth.login');
+});
+
+Route::get('/gegar-inicio', function () {
+    return view('inicio');
+})->name('gegar.inicio');
